@@ -1,0 +1,3 @@
+[submodule "PINN-Battery-Prognostics"]
+	path = PINN-Battery-Prognostics
+	url = https://github.com/WenPengfei0823/PINN-Battery-Prognostics.git

@@ -1,3 +1,6 @@
 [submodule "PINN-Battery-Prognostics"]
 	path = PINN-Battery-Prognostics
 	url = https://github.com/WenPengfei0823/PINN-Battery-Prognostics.git
+[submodule "PINN4SOH"]
+	path = PINN4SOH
+	url = https://github.com/wang-fujin/PINN4SOH.git

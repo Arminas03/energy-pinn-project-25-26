@@ -4,3 +4,6 @@
 [submodule "PINN4SOH"]
 	path = PINN4SOH
 	url = https://github.com/wang-fujin/PINN4SOH.git
+[submodule "NRP_2022_EEE12"]
+	path = NRP_2022_EEE12
+	url = https://github.com/sileneer/NRP_2022_EEE12.git

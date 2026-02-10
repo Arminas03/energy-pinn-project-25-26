@@ -5,7 +5,8 @@ venv
 myenv
 .myenv
 
-# csv
+# datafiles
 
 *.csv
-*.pdf
+*.mat
+*.hdf5

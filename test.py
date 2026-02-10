@@ -3,6 +3,7 @@ import torch.nn as nn
 import torch.nn.functional as F
 from tqdm import tqdm
 import math
+import h5py
 
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
@@ -130,6 +131,8 @@ def test(model: BaseMLP, data, hp):
 
 def main():
     data = get_data()
+
+    return
     model = BaseMLP(data["train"]["X"].size(1)).to(device)
     hp = {
         "epochs": 100,
@@ -148,3 +151,7 @@ def main():
     test_loss = test(model, data, hp)
     print("=" * 80)
     print(f"Test finished. Test loss: {test_loss:.4f}")
+
+
+if __name__ == "__main__":
+    main()

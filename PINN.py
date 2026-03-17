@@ -42,7 +42,8 @@ class PINN(nn.Module):
         return y_pred
 
     def _get_physics_loss(self, X_batch, y_pred):
-        return torch.mean(self._nth_deriv(X_batch, y_pred, 0, 1) ** 2)
+        # To satisfy dy/dx >= 0
+        return torch.mean(torch.relu(-self._nth_deriv(X_batch, y_pred, 0, 1)) ** 2)
 
     def loss_fn(self, X_batch, y_batch):
         X_batch = X_batch.requires_grad_(True)

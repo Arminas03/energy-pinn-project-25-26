@@ -13,11 +13,11 @@ class BaseMLP(nn.Module):
     def __init__(self, input_size):
         super(BaseMLP, self).__init__()
 
-        self.build_layers(input_size)
+        self._build_layers(input_size)
         self.set_optimizer()
         self.set_loss_fn()
 
-    def build_layers(self, input_size):
+    def _build_layers(self, input_size):
         self.layers = nn.Sequential(
             nn.Linear(input_size, 512),
             nn.LeakyReLU(),
